@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".RateActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55px"
+        android:layout_alignParentTop="true"
+        >
+        <ImageButton
+            android:layout_width="40mm"
+            android:layout_height="15mm"
+            android:id="@+id/yelowCar"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/yelow"/>
+
+        <ImageButton
+            android:layout_width="40mm"
+            android:layout_height="15mm"
+            android:id="@+id/redCar"
+            android:layout_marginTop="10mm"
+            android:layout_below="@id/yelowCar"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/red"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/startBlock"
+    android:layout_marginBottom="7mm"
+    android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rate_text"
+            android:layout_centerHorizontal="true">
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2000"
+            android:textColor="@color/white"
+            android:id="@+id/rateText"
+            android:layout_centerVertical="true"
+            android:textSize="5mm"/>
+        <ImageView
+            android:layout_width="200px"
+            android:id="@+id/mainTopImg"
+            android:layout_toEndOf="@id/rateText"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="3mm"
+            android:layout_height="250px"
+            android:src="@drawable/white"/>
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_below="@id/rate_text"
+            android:layout_width="55mm"
+            android:max="2000"
+            android:progress="2000"
+            android:thumb="@drawable/thumb2"
+            android:progressDrawable="@color/white"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/startBlock"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15mm"
+        >
+        <Button
+            android:layout_width="45mm"
+            android:layout_height="20mm"
+            android:background="@drawable/white"
+            android:text="СТАРТ!"
+            android:textColor="@color/red"
+            android:textAllCaps="true"
+            android:textSize="7mm"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btn_start"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

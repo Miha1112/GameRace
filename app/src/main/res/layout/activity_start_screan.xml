@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".StartScrean">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8mm"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainTopText"
+        android:textColor="@color/white"
+        android:textSize="10mm"
+        android:text="5000"/>
+        <ImageView
+            android:layout_width="15mm"
+            android:id="@+id/mainTopImg"
+            android:layout_toEndOf="@id/mainTopText"
+            android:layout_marginStart="3mm"
+            android:layout_height="15mm"
+            android:src="@drawable/white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15mm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startScreanMainContent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+        <Button
+            android:layout_width="45mm"
+            android:layout_height="20mm"
+            android:background="@drawable/white"
+            android:text="СТАРТ!"
+            android:textColor="@color/red"
+            android:textAllCaps="true"
+            android:textSize="7mm"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btn_start"
+            />
+        <Button
+            android:layout_width="45mm"
+            android:layout_height="20mm"
+            android:layout_marginTop="4mm"
+            android:background="@drawable/white"
+            android:text="выход"
+            android:textColor="@color/red"
+            android:textAllCaps="true"
+            android:textSize="7mm"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btn_exit"
+            android:layout_below="@id/btn_start"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

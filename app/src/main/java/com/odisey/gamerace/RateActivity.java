@@ -2,8 +2,10 @@ package com.odisey.gamerace;
 
 import static com.odisey.gamerace.MainActivity.rate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -34,6 +36,7 @@ public class RateActivity extends AppCompatActivity {
         TextView rateText = findViewById(R.id.rateText);
         ImageButton redCar = findViewById(R.id.redCar);
         ImageButton yellowCar = findViewById(R.id.yelowCar);
+        Button startRaceBtn = findViewById(R.id.btn_start);
         seekBarRate.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -68,5 +71,17 @@ public class RateActivity extends AppCompatActivity {
                 userCar = "yellowCar";
             }
         });
+        startRaceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toRace();
+            }
+        });
+    }
+
+    private void toRace(){
+        Intent intent = new Intent(this, RaceActivity.class);
+        startActivity(intent);
+
     }
 }

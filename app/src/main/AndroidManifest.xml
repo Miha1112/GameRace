@@ -13,6 +13,9 @@
         android:theme="@style/Theme.GameRace"
         tools:targetApi="31">
         <activity
+            android:name=".EndRaceActivity"
+            android:exported="false" />
+        <activity
             android:name=".RaceActivity"
             android:exported="false" />
         <activity

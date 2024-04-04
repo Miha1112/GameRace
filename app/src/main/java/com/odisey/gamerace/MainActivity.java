@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     public static int score = 5000;
-    public static int rate = 0;
+    public static int rate = 200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

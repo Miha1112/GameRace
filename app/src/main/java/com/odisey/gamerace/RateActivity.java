@@ -17,7 +17,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class RateActivity extends AppCompatActivity {
-    public String userCar = "";
+    public static String userCar = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +58,7 @@ public class RateActivity extends AppCompatActivity {
         redCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redCar.setAlpha(1);
+                v.setAlpha(1);
                 yellowCar.setAlpha(0.5f);
                 userCar = "redCar";
             }
@@ -66,7 +66,7 @@ public class RateActivity extends AppCompatActivity {
         yellowCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                yellowCar.setAlpha(1);
+                v.setAlpha(1);
                 redCar.setAlpha(0.5f);
                 userCar = "yellowCar";
             }

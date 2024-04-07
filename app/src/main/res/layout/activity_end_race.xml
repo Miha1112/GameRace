@@ -30,15 +30,23 @@
         android:textSize="22pt"
         android:layout_marginTop="150px"/>
 
+    <ImageView
+        android:layout_width="700px"
+        android:layout_height="450px"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/white"
+        android:id="@+id/menuBtn"
+        />
     <Button
         android:layout_width="700px"
-        android:layout_height="500px"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/white"
+        android:layout_height="450px"
         android:layout_alignParentBottom="true"
-        android:text="MENU"
-        android:id="@+id/menuBtn"
+        android:layout_centerHorizontal="true"
+        android:text="меню"
         android:textSize="18pt"
-        />
+        android:textColor="@color/red"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>
 
 </RelativeLayout>

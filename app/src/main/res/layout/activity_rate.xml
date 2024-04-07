@@ -81,17 +81,21 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="15mm"
         >
-        <Button
-            android:layout_width="45mm"
-            android:layout_height="20mm"
+        <ImageView
+            android:layout_width="750px"
+            android:layout_height="370px"
             android:background="@drawable/white"
-            android:text="СТАРТ!"
-            android:textColor="@color/red"
-            android:textAllCaps="true"
-            android:textSize="7mm"
             android:layout_centerHorizontal="true"
             android:id="@+id/btn_start"
             />
+        <Button
+            android:layout_width="750px"
+            android:layout_height="370px"
+            android:text="СТАРТ!"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="7mm"/>
     </RelativeLayout>
 
 </RelativeLayout>

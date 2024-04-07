@@ -41,30 +41,42 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         >
+        <ImageView
+            android:layout_width="45mm"
+            android:layout_height="20mm"
+            android:background="@drawable/yelow"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btn_startImg"
+            />
         <Button
             android:layout_width="45mm"
             android:layout_height="20mm"
-            android:background="@drawable/white"
             android:text="СТАРТ!"
-            android:textColor="@color/red"
             android:textAllCaps="true"
             android:textSize="7mm"
-            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
             android:id="@+id/btn_start"
-            />
-        <Button
+            android:textColor="@color/red"/>
+        <ImageView
             android:layout_width="45mm"
             android:layout_height="20mm"
             android:layout_marginTop="4mm"
-            android:background="@drawable/white"
-            android:text="выход"
-            android:textColor="@color/red"
-            android:textAllCaps="true"
-            android:textSize="7mm"
+            android:background="@drawable/red"
             android:layout_centerHorizontal="true"
-            android:id="@+id/btn_exit"
-            android:layout_below="@id/btn_start"
+            android:id="@+id/btn_exitImg"
+            android:layout_below="@id/btn_startImg"
             />
+        <Button
+            android:layout_width="45mm"
+            android:layout_height="20mm"
+            android:text="выход"
+            android:textColor="@color/yellow"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:id="@+id/btn_exit"
+            android:layout_below="@id/btn_startImg"
+            android:layout_marginTop="4mm"
+            android:textSize="7mm"/>
 
     </RelativeLayout>
 

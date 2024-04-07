@@ -29,13 +29,10 @@ public class RaceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_race);
         init();
 
-        // Знаходимо елемент MovingSquaresView за його ID
         movingSquaresView = findViewById(R.id.movingSquare);
 
-        // Ініціалізуємо Handler для автоматичного переміщення квадратів
         handler = new Handler();
 
-        // Запускаємо періодичну задачу для переміщення квадратів кожні 500 мілісекунд
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -44,7 +41,6 @@ public class RaceActivity extends AppCompatActivity {
                     goToEndGame();
                 }
                 moveSquares(speedArr[0],speedArr[1]);
-                // Повторюємо цю задачу кожні 500 мілісекунд
                 handler.postDelayed(this, 10);
             }
         }, 10);
@@ -68,7 +64,6 @@ public class RaceActivity extends AppCompatActivity {
 
     }
 
-    // Метод для переміщення квадратів у MovingSquaresView
     private void moveSquares(int redSpeed, int yellowSpeed) {
         movingSquaresView.moveSquares(redSpeed,yellowSpeed);
     }

@@ -5,6 +5,8 @@
     <color name="red">#ED0606</color>
     <color name="yellow">#EDD11D</color>
 
+    <color name="alphaYellow">#F8CE00</color>
+
     <color name="transparent">#00FFFFFF</color>
 
 </resources>

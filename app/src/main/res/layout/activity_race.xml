@@ -28,15 +28,17 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
             android:src="@drawable/finish"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Финиш"
-            android:shadowColor="@color/yellow"
+            android:layout_marginTop="40px"
             android:shadowRadius="25"
             android:textColor="@color/red"
+            android:id="@+id/finishText"
             android:textSize="34pt"
             android:layout_centerHorizontal="true"
             android:textAllCaps="true"/>

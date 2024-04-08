@@ -40,8 +40,12 @@ public class EndRaceActivity extends AppCompatActivity {
 
         if (winner == 0){
             winnerName.setText("Красный победил");
+            ImageView winnerImg = findViewById(R.id.winnerImage);
+            winnerImg.setImageResource(R.drawable.redwin);
         }else {
             winnerName.setText("Желтый победил");
+            ImageView winnerImg = findViewById(R.id.winnerImage);
+            winnerImg.setImageResource(R.drawable.yellowwin);
         }
         System.out.println("Winner is: " + winner + " user car: " + userCar);
         if (winner == userCar){

@@ -3,14 +3,26 @@ package com.odisey.gamerace;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Outline;
 import android.graphics.Paint;
+import android.graphics.Point;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PersistableBundle;
+import android.text.SpannableStringBuilder;
+import android.text.TextPaint;
+import android.text.style.CharacterStyle;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.TextAppearanceSpan;
+import android.text.style.UpdateAppearance;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +40,21 @@ public class RaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_race);
         init();
+        TextView textView = findViewById(R.id.finishText);
+        String text = "ФИНИШ";
+        SpannableStringBuilder builder = new SpannableStringBuilder(text);
+
+        // Встановлення червоного кольору для всього тексту
+        ForegroundColorSpan redColorSpan = new ForegroundColorSpan(Color.RED);
+        builder.setSpan(redColorSpan, 0, text.length(), 0);
+
+        // Встановлення жовтого контура для літер
+        TextAppearanceSpan textAppearanceSpan = new TextAppearanceSpan(null, Typeface.BOLD, -1, null, null);
+        OutlineSpan outlineSpan = new OutlineSpan();
+        builder.setSpan(outlineSpan, 0, text.length(), 0);
+        builder.setSpan(textAppearanceSpan, 0, text.length(), 0);
+
+        textView.setText(builder);
 
         movingSquaresView = findViewById(R.id.movingSquare);
 
@@ -76,5 +103,25 @@ public class RaceActivity extends AppCompatActivity {
 
     private void moveSquares(float redSpeed, float yellowSpeed) {
         movingSquaresView.moveSquares(redSpeed,yellowSpeed);
+    }
+
+    private void setTextColor(){
+
+    }
+    private static class OutlineSpan extends CharacterStyle {
+        @Override
+        public void updateDrawState(TextPaint paint) {
+            paint.setColor(Color.YELLOW);
+            paint.setStrokeWidth(2);
+            paint.setStyle(Paint.Style.STROKE);
+        }
+
+        public void updateMeasureState(TextPaint paint) {
+            updateDrawState(paint);
+        }
+
+        public void drawBackground(Canvas canvas, Paint paint, int left, int right, int top, int baseline, int bottom, CharSequence text, int start, int end, int lnum) {
+            // Перевизначаємо метод drawBackground, щоб нічого не робити
+        }
     }
 }

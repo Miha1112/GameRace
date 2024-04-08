@@ -20,15 +20,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mainTopText"
+        android:layout_centerVertical="true"
         android:textColor="@color/white"
-        android:textSize="10mm"
+        android:textSize="24pt"
         android:text="5000"/>
         <ImageView
-            android:layout_width="15mm"
+            android:layout_width="400px"
+            android:layout_height="300px"
             android:id="@+id/mainTopImg"
             android:layout_toEndOf="@id/mainTopText"
             android:layout_marginStart="3mm"
-            android:layout_height="15mm"
             android:src="@drawable/white"/>
     </RelativeLayout>
 
@@ -42,24 +43,26 @@
         android:layout_centerVertical="true"
         >
         <ImageView
-            android:layout_width="45mm"
-            android:layout_height="20mm"
+            android:layout_width="700px"
+            android:layout_height="300px"
             android:background="@drawable/yelow"
             android:layout_centerHorizontal="true"
             android:id="@+id/btn_startImg"
             />
         <Button
-            android:layout_width="45mm"
-            android:layout_height="20mm"
+            android:layout_width="700px"
+            android:layout_height="300px"
             android:text="СТАРТ!"
             android:textAllCaps="true"
             android:textSize="7mm"
             android:textStyle="bold"
             android:id="@+id/btn_start"
-            android:textColor="@color/red"/>
+            android:textColor="@color/red"
+            android:shadowColor="@color/white"
+            android:shadowRadius="50"/>
         <ImageView
-            android:layout_width="45mm"
-            android:layout_height="20mm"
+            android:layout_width="700px"
+            android:layout_height="300px"
             android:layout_marginTop="4mm"
             android:background="@drawable/red"
             android:layout_centerHorizontal="true"
@@ -67,14 +70,16 @@
             android:layout_below="@id/btn_startImg"
             />
         <Button
-            android:layout_width="45mm"
-            android:layout_height="20mm"
+            android:layout_width="700px"
+            android:layout_height="300px"
             android:text="выход"
             android:textColor="@color/yellow"
             android:textAllCaps="true"
             android:textStyle="bold"
             android:id="@+id/btn_exit"
             android:layout_below="@id/btn_startImg"
+            android:shadowColor="@color/white"
+            android:shadowRadius="20"
             android:layout_marginTop="4mm"
             android:textSize="7mm"/>
 

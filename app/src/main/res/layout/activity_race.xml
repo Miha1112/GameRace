@@ -34,6 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Финиш"
+            android:shadowColor="@color/yellow"
+            android:shadowRadius="25"
             android:textColor="@color/red"
             android:textSize="34pt"
             android:layout_centerHorizontal="true"

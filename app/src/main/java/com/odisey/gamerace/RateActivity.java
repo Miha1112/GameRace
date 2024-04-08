@@ -16,8 +16,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Objects;
+
 public class RateActivity extends AppCompatActivity {
-    public static String userCar = "";
+    public static int userCar = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,7 @@ public class RateActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 rate = progress;
+                System.out.println("RATE SET TO : " + rate + " Progress is: " + progress);
                 rateText.setText(Integer.toString(rate));
             }
 
@@ -60,7 +63,8 @@ public class RateActivity extends AppCompatActivity {
             public void onClick(View v) {
                 v.setAlpha(1);
                 yellowCar.setAlpha(0.5f);
-                userCar = "redCar";
+                System.out.println("user choose red car");
+                userCar = 0;
             }
         });
         yellowCar.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +72,8 @@ public class RateActivity extends AppCompatActivity {
             public void onClick(View v) {
                 v.setAlpha(1);
                 redCar.setAlpha(0.5f);
-                userCar = "yellowCar";
+                System.out.println("user choose red car");
+                userCar = 1;
             }
         });
         startRaceBtn.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +86,9 @@ public class RateActivity extends AppCompatActivity {
 
     private void toRace(){
         Intent intent = new Intent(this, RaceActivity.class);
-        startActivity(intent);
+        if (userCar != 2) {
+            startActivity(intent);
+        }
 
     }
 }

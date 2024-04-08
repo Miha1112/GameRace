@@ -1,5 +1,6 @@
 package com.odisey.gamerace;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.animation.Animation;
@@ -33,7 +34,29 @@ public class LoadingActivity extends AppCompatActivity {
 
         rotateAnimation.setInterpolator(new LinearInterpolator());
         rotateAnimation.setDuration(5000);
-        rotateAnimation.setRepeatCount(Animation.INFINITE);
+        //rotateAnimation.setRepeatCount(Animation.INFINITE);
         logo.startAnimation(rotateAnimation);
+
+        rotateAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                goToGame();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+    private void goToGame(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -38,12 +38,13 @@ public class EndRaceActivity extends AppCompatActivity {
         TextView winnerName = findViewById(R.id.winnerName);
         TextView rateText = findViewById(R.id.rateWinCount);
 
-        if (Objects.equals(winner, "redCar")){
+        if (winner == 0){
             winnerName.setText("Красный победил");
         }else {
             winnerName.setText("Желтый победил");
         }
-        if (Objects.equals(winner, userCar)){
+        System.out.println("Winner is: " + winner + " user car: " + userCar);
+        if (winner == userCar){
             rateText.setText("+ " + rate);
             score+=rate;
         }else {
@@ -52,7 +53,7 @@ public class EndRaceActivity extends AppCompatActivity {
         }
 
 
-        ImageView btn = findViewById(R.id.menuBtn);
+        Button btn = findViewById(R.id.menuBtn1);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,8 +63,6 @@ public class EndRaceActivity extends AppCompatActivity {
 
     }
     private void toMenu(){
-        Intent intent = new Intent(this, RaceActivity.class);
-        startActivity(intent);
         finish();
     }
 }

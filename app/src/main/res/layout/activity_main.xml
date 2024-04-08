@@ -14,26 +14,33 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
         <ImageView
-            android:layout_width="25mm"
-            android:layout_height="25mm"
+            android:layout_width="750px"
+            android:layout_height="750px"
             android:src="@drawable/logo"
             android:layout_centerHorizontal="true"
             android:rotation="-80"
             android:id="@+id/logo"
             android:layout_marginBottom="5mm"
             />
-        <Button
-            android:layout_width="45mm"
-            android:layout_height="20mm"
+        <ImageView
+            android:layout_width="750px"
+            android:layout_height="500px"
             android:background="@drawable/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/logo"
+            />
+        <Button
+            android:layout_width="750px"
+            android:layout_height="500px"
             android:text="СТАРТ!"
             android:textColor="@color/red"
             android:textAllCaps="true"
-            android:textSize="10mm"
-            android:layout_centerHorizontal="true"
             android:id="@+id/btn_start"
-            android:layout_below="@id/logo"
-            />
+            android:layout_centerHorizontal="true"
+            android:textSize="32pt"
+            android:shadowColor="@color/yellow"
+            android:shadowRadius="25"
+            android:layout_below="@id/logo"/>
 
     </RelativeLayout>
 

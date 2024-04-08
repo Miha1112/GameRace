@@ -15,14 +15,14 @@ import android.widget.RelativeLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Objects;
+import java.util.Random;
 
 public class RaceActivity extends AppCompatActivity {
     private MovingSquaresView movingSquaresView;
     private Handler handler;
     public  static Boolean endGame = false;
-    private String[] carsArr = {"redCar","yellowCar"};
-    private int[] speedArr = {0,0};
-    public static String winner = "";
+    private float[] speedArr = {0,0};
+    public static int winner = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,13 +37,16 @@ public class RaceActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if (endGame){
-                    handler.removeCallbacksAndMessages(null);
+                    System.out.println("TRY END GAME");
                     goToEndGame();
+                    handler.removeCallbacks(this);
+                    return;
                 }
                 moveSquares(speedArr[0],speedArr[1]);
-                handler.postDelayed(this, 10);
+                System.out.println("Red speed: " + speedArr[0] + " yelow speed: " + speedArr[1]);
+                handler.postDelayed(this, 30);
             }
-        }, 10);
+        }, 30);
     }
     private void goToEndGame(){
         Intent intent = new Intent(this, EndRaceActivity.class);
@@ -52,19 +55,26 @@ public class RaceActivity extends AppCompatActivity {
 
     }
     private void init(){
-        winner = carsArr[(int) Math.random()];
+        winner = (int) Math.round(Math.random());
+        System.out.println("WINNER IS: " + winner);
 
-        if (Objects.equals(winner, "redCar")){
-            speedArr[0] = (int) (Math.random() * 10) / 2;
-            speedArr[1] = ((speedArr[0] / 2 ) * 3);
+        if (winner == 0){
+            speedArr[0] = (float) ((Math.random() * 30) / 2);
+            speedArr[1] = ((speedArr[0] * 3) / 2 );
         }else {
-            speedArr[1] = (int) (Math.random() * 10) / 2;
-            speedArr[0] = ((speedArr[1] / 2 ) * 3);
+            speedArr[1] = (float) ((Math.random() * 30));
+            speedArr[0] = (float) (speedArr[1] * 0.8);
+        }
+
+        if (speedArr[0] <=1 || speedArr[1] <= 1){
+            //reload speed value
+            System.out.println("RELOAD SPEED VALUE");
+            init();
         }
 
     }
 
-    private void moveSquares(int redSpeed, int yellowSpeed) {
+    private void moveSquares(float redSpeed, float yellowSpeed) {
         movingSquaresView.moveSquares(redSpeed,yellowSpeed);
     }
 }

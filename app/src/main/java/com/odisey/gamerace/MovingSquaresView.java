@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import static com.odisey.gamerace.RaceActivity.endGame;
@@ -43,13 +44,23 @@ public class MovingSquaresView extends View {
 
         int squareSize = width / 6;
 
-        canvas.drawRect(50, height - squareSize - yellowSquareY, squareSize+50, height - yellowSquareY, yellowPaint);
+        Drawable yellowDrawable = getResources().getDrawable(R.drawable.yelow);
+        Drawable redDrawable = getResources().getDrawable(R.drawable.red);
 
-        canvas.drawRect(width - squareSize - 150, height - squareSize - redSquareY, width-150, height - redSquareY, redPaint);
+        // Встановлюємо розмір та позицію для ресурсів
+        yellowDrawable.setBounds(150, height - squareSize - yellowSquareY, squareSize+150, height - yellowSquareY);
+        redDrawable.setBounds(width - squareSize - 150, height - squareSize - redSquareY, width-150, height - redSquareY);
+
+        // Намалюємо ресурси на Canvas
+        yellowDrawable.draw(canvas);
+        redDrawable.draw(canvas);
     }
 
-    public void moveSquares(int redSpeed, int yellowSpeed) {
-        int width = getWidth() /6;
+    public void moveSquares(float redSpeed, float yellowSpeed) {
+        if (endGame){
+            return;
+        }
+        int width = getWidth() / 6;
         int height = getHeight();
         if (height - width - yellowSquareY <= 150){
             endGame = true;

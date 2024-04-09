@@ -49,17 +49,17 @@
             android:layout_centerHorizontal="true"
             android:id="@+id/btn_startImg"
             />
-        <Button
+        <com.odisey.gamerace.ButtonStrokeText
             android:layout_width="700px"
             android:layout_height="300px"
-            android:text="СТАРТ!"
+            android:background=""
+            android:text="Старт!"
             android:textAllCaps="true"
-            android:textSize="7mm"
-            android:textStyle="bold"
             android:id="@+id/btn_start"
+            android:textSize="30pt"
             android:textColor="@color/red"
-            android:shadowColor="@color/white"
-            android:shadowRadius="50"/>
+            app:textStrokeColor="@color/white"
+            app:textStrokeWidth="15sp"/>
         <ImageView
             android:layout_width="700px"
             android:layout_height="300px"
@@ -69,19 +69,19 @@
             android:id="@+id/btn_exitImg"
             android:layout_below="@id/btn_startImg"
             />
-        <Button
+        <com.odisey.gamerace.ButtonStrokeText
             android:layout_width="700px"
             android:layout_height="300px"
+            android:background=""
             android:text="выход"
-            android:textColor="@color/yellow"
             android:textAllCaps="true"
-            android:textStyle="bold"
             android:id="@+id/btn_exit"
             android:layout_below="@id/btn_startImg"
-            android:shadowColor="@color/white"
-            android:shadowRadius="20"
-            android:layout_marginTop="4mm"
-            android:textSize="7mm"/>
+            android:textSize="26pt"
+            android:textColor="@color/yellow"
+            app:textStrokeColor="@color/white"
+            android:layout_marginTop="40px"
+            app:textStrokeWidth="15sp"/>
 
     </RelativeLayout>
 

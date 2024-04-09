@@ -90,17 +90,19 @@
             android:background="@drawable/white"
             android:layout_centerHorizontal="true"
             />
-        <Button
-            android:layout_width="750px"
-            android:layout_height="370px"
+        <com.odisey.gamerace.ButtonStrokeText
+            android:layout_width="700px"
+            android:layout_height="300px"
+            android:background=""
             android:text="СТАРТ!"
-            android:id="@+id/btn_start"
-            android:textColor="@color/red"
-            android:shadowColor="@color/yellow"
-            android:shadowRadius="25"
-            android:textStyle="bold"
             android:textAllCaps="true"
-            android:textSize="28pt"/>
+            android:id="@+id/btn_start"
+            android:textStyle="bold"
+            android:textSize="26pt"
+            android:textColor="@color/red"
+            app:textStrokeColor="@color/yellow"
+            android:layout_marginTop="35px"
+            app:textStrokeWidth="15sp"/>
     </RelativeLayout>
 
 </RelativeLayout>

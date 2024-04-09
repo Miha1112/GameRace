@@ -10,27 +10,26 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/redWin"
+        android:src="@drawable/redwin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150px"
         android:id="@+id/winnerImage"
         />
-    <TextView
+
+    <com.odisey.gamerace.OutlineTextView
+        android:id="@+id/winnerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/winnerName"
-        android:text="победил"
+        android:textColor="@color/red"
+        android:text="Test text"
         android:layout_below="@id/winnerImage"
-
         android:layout_centerHorizontal="true"
-        android:shadowColor="@color/yellow"
-        android:shadowRadius="25"
         android:textAllCaps="true"
         android:textSize="24pt"
+        android:textStyle="bold"
         android:layout_marginTop="150px"
-        android:textColor="@color/red"
-        />
-
+        app:textStrokeColor="@color/yellow"
+        app:textStrokeWidth="12sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,18 +49,19 @@
         android:background="@drawable/white"
         android:id="@+id/menuBtn"
         />
-    <Button
+    <com.odisey.gamerace.ButtonStrokeText
         android:layout_width="700px"
         android:layout_height="450px"
+        android:background=""
+        android:text="меню!"
+        android:textAllCaps="true"
+        android:id="@+id/menuBtn1"
+        android:textStyle="bold"
+        android:textSize="26pt"
+        android:textColor="@color/red"
+        app:textStrokeColor="@color/yellow"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/menuBtn1"
-        android:text="меню"
-        android:textSize="28pt"
-        android:shadowColor="@color/yellow"
-        android:shadowRadius="25"
-        android:textColor="@color/red"
-        android:textAllCaps="true"
-        android:textStyle="bold"/>
+        app:textStrokeWidth="15sp"/>
 
 </RelativeLayout>

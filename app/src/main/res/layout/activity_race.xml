@@ -31,17 +31,19 @@
             android:layout_marginTop="40px"
             android:src="@drawable/finish"/>
 
-        <TextView
+        <com.odisey.gamerace.OutlineTextView
+            android:id="@+id/finishText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Финиш"
-            android:layout_marginTop="40px"
-            android:shadowRadius="25"
             android:textColor="@color/red"
-            android:id="@+id/finishText"
-            android:textSize="34pt"
+            android:text="Финиш"
             android:layout_centerHorizontal="true"
-            android:textAllCaps="true"/>
+            android:textAllCaps="true"
+            android:textSize="34pt"
+            android:textStyle="bold"
+            android:layout_marginTop="40px"
+            app:textStrokeColor="@color/yellow"
+            app:textStrokeWidth="12sp"/>
             <com.odisey.gamerace.MovingSquaresView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

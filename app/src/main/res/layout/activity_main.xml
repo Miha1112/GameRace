@@ -29,18 +29,19 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/logo"
             />
-        <Button
+        <com.odisey.gamerace.ButtonStrokeText
             android:layout_width="750px"
             android:layout_height="500px"
             android:text="СТАРТ!"
             android:textColor="@color/red"
             android:textAllCaps="true"
             android:id="@+id/btn_start"
+            android:background=""
             android:layout_centerHorizontal="true"
             android:textSize="32pt"
-            android:shadowColor="@color/yellow"
-            android:shadowRadius="25"
-            android:layout_below="@id/logo"/>
+            android:layout_below="@id/logo"
+            app:textStrokeColor="@color/yellow"
+            app:textStrokeWidth="15sp"/>
 
     </RelativeLayout>
 

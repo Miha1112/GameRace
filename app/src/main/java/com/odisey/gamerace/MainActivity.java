@@ -1,5 +1,6 @@
 package com.odisey.gamerace;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -16,9 +17,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Stack;
+
 public class MainActivity extends AppCompatActivity {
     public static int score = 5000;
     public static int rate = 200;
+    public static ActivityCloser activityCloser = new ActivityCloser();
+
+    public  static Boolean endGame = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +36,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        ActivityCloser.addActivity(this);
+
 
         Button startBtn = findViewById(R.id.btn_start);
-        startBtn.setTextColor(Color.RED);
-        ShapeDrawable shapeDrawable = new ShapeDrawable(new RectShape());
-        shapeDrawable.getPaint().setColor(Color.YELLOW);
-        shapeDrawable.getPaint().setStyle(Paint.Style.STROKE);
-        shapeDrawable.getPaint().setStrokeWidth(5);
-        startBtn.setBackground(shapeDrawable);
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

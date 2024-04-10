@@ -1,5 +1,7 @@
 package com.odisey.gamerace;
 
+import static com.odisey.gamerace.MainActivity.endGame;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Canvas;
@@ -32,29 +34,14 @@ import java.util.Random;
 public class RaceActivity extends AppCompatActivity {
     private MovingSquaresView movingSquaresView;
     private Handler handler;
-    public  static Boolean endGame = false;
     private float[] speedArr = {0,0};
     public static int winner = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_race);
+        ActivityCloser.addActivity(this);
         init();
-        TextView textView = findViewById(R.id.finishText);
-        String text = "ФИНИШ";
-        SpannableStringBuilder builder = new SpannableStringBuilder(text);
-
-        // Встановлення червоного кольору для всього тексту
-        ForegroundColorSpan redColorSpan = new ForegroundColorSpan(Color.RED);
-        builder.setSpan(redColorSpan, 0, text.length(), 0);
-
-        // Встановлення жовтого контура для літер
-        TextAppearanceSpan textAppearanceSpan = new TextAppearanceSpan(null, Typeface.BOLD, -1, null, null);
-        OutlineSpan outlineSpan = new OutlineSpan();
-        builder.setSpan(outlineSpan, 0, text.length(), 0);
-        builder.setSpan(textAppearanceSpan, 0, text.length(), 0);
-
-        textView.setText(builder);
 
         movingSquaresView = findViewById(R.id.movingSquare);
 
@@ -86,11 +73,11 @@ public class RaceActivity extends AppCompatActivity {
         System.out.println("WINNER IS: " + winner);
 
         if (winner == 0){
-            speedArr[0] = (float) ((Math.random() * 30) / 2);
-            speedArr[1] = ((speedArr[0] * 3) / 2 );
+            speedArr[0] = (float) ((Math.random() * 20) / 2);
+            speedArr[1] = (float) (speedArr[0] * (Math.random() - 0.1));
         }else {
-            speedArr[1] = (float) ((Math.random() * 30));
-            speedArr[0] = (float) (speedArr[1] * 0.8);
+            speedArr[1] = (float) ((Math.random() * 20));
+            speedArr[0] = (float) (speedArr[1] * (Math.random() - 0.1));
         }
 
         if (speedArr[0] <=1 || speedArr[1] <= 1){
@@ -103,25 +90,5 @@ public class RaceActivity extends AppCompatActivity {
 
     private void moveSquares(float redSpeed, float yellowSpeed) {
         movingSquaresView.moveSquares(redSpeed,yellowSpeed);
-    }
-
-    private void setTextColor(){
-
-    }
-    private static class OutlineSpan extends CharacterStyle {
-        @Override
-        public void updateDrawState(TextPaint paint) {
-            paint.setColor(Color.YELLOW);
-            paint.setStrokeWidth(2);
-            paint.setStyle(Paint.Style.STROKE);
-        }
-
-        public void updateMeasureState(TextPaint paint) {
-            updateDrawState(paint);
-        }
-
-        public void drawBackground(Canvas canvas, Paint paint, int left, int right, int top, int baseline, int bottom, CharSequence text, int start, int end, int lnum) {
-            // Перевизначаємо метод drawBackground, щоб нічого не робити
-        }
     }
 }

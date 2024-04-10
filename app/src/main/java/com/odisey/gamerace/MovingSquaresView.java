@@ -7,7 +7,8 @@ import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
-import static com.odisey.gamerace.RaceActivity.endGame;
+
+import static com.odisey.gamerace.MainActivity.endGame;
 
 
 public class MovingSquaresView extends View {

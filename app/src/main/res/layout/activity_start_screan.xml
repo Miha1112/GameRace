@@ -22,7 +22,7 @@
         android:id="@+id/mainTopText"
         android:layout_centerVertical="true"
         android:textColor="@color/white"
-        android:textSize="24pt"
+        android:textSize="10mm"
         android:text="5000"/>
         <ImageView
             android:layout_width="400px"
@@ -42,42 +42,26 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         >
-        <ImageView
-            android:layout_width="700px"
-            android:layout_height="300px"
-            android:background="@drawable/yelow"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/btn_startImg"
-            />
         <com.odisey.gamerace.ButtonStrokeText
-            android:layout_width="700px"
-            android:layout_height="300px"
-            android:background=""
+            android:layout_width="750px"
+            android:layout_height="320px"
+            android:background="@drawable/yelow"
             android:text="Старт!"
             android:textAllCaps="true"
             android:id="@+id/btn_start"
-            android:textSize="30pt"
+            android:textSize="10mm"
             android:textColor="@color/red"
             app:textStrokeColor="@color/white"
             app:textStrokeWidth="15sp"/>
-        <ImageView
-            android:layout_width="700px"
-            android:layout_height="300px"
-            android:layout_marginTop="4mm"
-            android:background="@drawable/red"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/btn_exitImg"
-            android:layout_below="@id/btn_startImg"
-            />
         <com.odisey.gamerace.ButtonStrokeText
-            android:layout_width="700px"
-            android:layout_height="300px"
-            android:background=""
+            android:layout_width="750px"
+            android:layout_height="320px"
+            android:background="@drawable/red"
             android:text="выход"
             android:textAllCaps="true"
             android:id="@+id/btn_exit"
-            android:layout_below="@id/btn_startImg"
-            android:textSize="26pt"
+            android:layout_below="@id/btn_start"
+            android:textSize="10mm"
             android:textColor="@color/yellow"
             app:textStrokeColor="@color/white"
             android:layout_marginTop="40px"

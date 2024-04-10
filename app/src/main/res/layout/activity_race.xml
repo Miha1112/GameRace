@@ -39,9 +39,9 @@
             android:text="Финиш"
             android:layout_centerHorizontal="true"
             android:textAllCaps="true"
-            android:textSize="34pt"
+            android:textSize="10mm"
             android:textStyle="bold"
-            android:layout_marginTop="40px"
+            android:layout_marginTop="70px"
             app:textStrokeColor="@color/yellow"
             app:textStrokeWidth="12sp"/>
             <com.odisey.gamerace.MovingSquaresView

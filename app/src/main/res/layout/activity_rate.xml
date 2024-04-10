@@ -84,25 +84,19 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="15mm"
         >
-        <ImageView
-            android:layout_width="750px"
-            android:layout_height="370px"
-            android:background="@drawable/white"
-            android:layout_centerHorizontal="true"
-            />
         <com.odisey.gamerace.ButtonStrokeText
-            android:layout_width="700px"
-            android:layout_height="300px"
-            android:background=""
+            android:id="@+id/btn_start"
+            android:layout_width="750px"
+            android:layout_height="350px"
+            android:layout_marginTop="35px"
+            android:background="@drawable/white"
             android:text="СТАРТ!"
             android:textAllCaps="true"
-            android:id="@+id/btn_start"
-            android:textStyle="bold"
-            android:textSize="26pt"
             android:textColor="@color/red"
+            android:textSize="10mm"
+            android:textStyle="bold"
             app:textStrokeColor="@color/yellow"
-            android:layout_marginTop="35px"
-            app:textStrokeWidth="15sp"/>
+            app:textStrokeWidth="15sp" />
     </RelativeLayout>
 
 </RelativeLayout>

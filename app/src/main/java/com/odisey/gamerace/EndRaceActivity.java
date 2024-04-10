@@ -1,5 +1,6 @@
 package com.odisey.gamerace;
 
+import static com.odisey.gamerace.MainActivity.endGame;
 import static com.odisey.gamerace.MainActivity.rate;
 import static com.odisey.gamerace.MainActivity.score;
 import static com.odisey.gamerace.RaceActivity.winner;
@@ -32,9 +33,11 @@ public class EndRaceActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        ActivityCloser.addActivity(this);
         init();
     }
     private void init(){
+        endGame = false;
         TextView winnerName = findViewById(R.id.winnerName);
         TextView rateText = findViewById(R.id.rateWinCount);
 
@@ -67,6 +70,8 @@ public class EndRaceActivity extends AppCompatActivity {
 
     }
     private void toMenu(){
+        Intent intent = new Intent(this, StartScrean.class);
+        startActivity(intent);
         finish();
     }
 }

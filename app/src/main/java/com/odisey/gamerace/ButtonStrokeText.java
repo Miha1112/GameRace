@@ -20,9 +20,9 @@ public class ButtonStrokeText extends androidx.appcompat.widget.AppCompatButton 
     public ButtonStrokeText(Context context, AttributeSet attrs)
     {
         super(context, attrs);
-        TypedArray a = context.obtainStyledAttributes(attrs,R.styleable.ButtonStrokeText);
-        strokeColor=a.getColor(R.styleable.ButtonStrokeText_textStrokeColor, strokeColor);
-        strokeWidth=a.getDimensionPixelSize(R.styleable.ButtonStrokeText_textStrokeWidth, strokeWidth);
+        TypedArray a = context.obtainStyledAttributes(attrs,R.styleable.OutlineTextView);
+        strokeColor=a.getColor(R.styleable.OutlineTextView_textStrokeColor, strokeColor);
+        strokeWidth=a.getDimensionPixelSize(R.styleable.OutlineTextView_textStrokeWidth, strokeWidth);
         a.recycle();
     }
     public void onDraw(Canvas canvas)

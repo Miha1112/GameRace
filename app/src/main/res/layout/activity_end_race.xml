@@ -41,18 +41,10 @@
         android:textSize="22pt"
         android:layout_marginTop="150px"/>
 
-    <ImageView
-        android:layout_width="700px"
-        android:layout_height="450px"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/white"
-        android:id="@+id/menuBtn"
-        />
     <com.odisey.gamerace.ButtonStrokeText
         android:layout_width="700px"
         android:layout_height="450px"
-        android:background=""
+        android:background="@drawable/white"
         android:text="меню!"
         android:textAllCaps="true"
         android:id="@+id/menuBtn1"

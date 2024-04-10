@@ -25,29 +25,34 @@
             android:layout_alignParentEnd="true"
             android:src="@drawable/side_line"/>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40px"
-            android:src="@drawable/finish"/>
 
-        <com.odisey.gamerace.OutlineTextView
-            android:id="@+id/finishText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/red"
-            android:text="Финиш"
-            android:layout_centerHorizontal="true"
-            android:textAllCaps="true"
-            android:textSize="10mm"
-            android:textStyle="bold"
-            android:layout_marginTop="70px"
-            app:textStrokeColor="@color/yellow"
-            app:textStrokeWidth="12sp"/>
+
+
             <com.odisey.gamerace.MovingSquaresView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/movingSquare"/>
     </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40px"
+        android:id="@+id/finisingImg"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/finish"/>
+    <com.odisey.gamerace.OutlineTextView
+    android:id="@+id/finishText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/red"
+    android:text="Финиш"
+    android:layout_centerHorizontal="true"
+    android:textAllCaps="true"
+    android:textSize="10mm"
+    android:textStyle="bold"
+    android:layout_marginTop="70px"
+    app:textStrokeColor="@color/yellow"
+    app:textStrokeWidth="12sp"/>
 
 </RelativeLayout>

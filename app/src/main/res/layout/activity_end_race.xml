@@ -22,10 +22,11 @@
         android:layout_height="wrap_content"
         android:textColor="@color/red"
         android:text="Test text"
+        android:gravity="center"
         android:layout_below="@id/winnerImage"
         android:layout_centerHorizontal="true"
         android:textAllCaps="true"
-        android:textSize="24pt"
+        android:textSize="10mm"
         android:textStyle="bold"
         android:layout_marginTop="150px"
         app:textStrokeColor="@color/yellow"
@@ -38,13 +39,18 @@
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/winnerName"
-        android:textSize="22pt"
+        android:textSize="8mm"
         android:layout_marginTop="150px"/>
-
+    <ImageView
+        android:layout_width="700px"
+        android:layout_height="450px"
+        android:src="@drawable/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
     <com.odisey.gamerace.ButtonStrokeText
         android:layout_width="700px"
         android:layout_height="450px"
-        android:background="@drawable/white"
+        android:background="@null"
         android:text="меню!"
         android:textAllCaps="true"
         android:id="@+id/menuBtn1"

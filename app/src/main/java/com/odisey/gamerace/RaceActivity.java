@@ -42,6 +42,8 @@ public class RaceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_race);
         ActivityCloser.addActivity(this);
         init();
+        ImageView finish = findViewById(R.id.finisingImg);
+        finish.setColorFilter(Color.WHITE);
 
         movingSquaresView = findViewById(R.id.movingSquare);
 

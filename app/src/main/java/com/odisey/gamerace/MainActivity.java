@@ -21,7 +21,7 @@ import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity {
     public static int score = 5000;
-    public static int rate = 200;
+    public static int rate = 2000;
     public static ActivityCloser activityCloser = new ActivityCloser();
 
     public  static Boolean endGame = false;

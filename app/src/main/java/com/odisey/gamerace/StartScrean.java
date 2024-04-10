@@ -47,6 +47,7 @@ public class StartScrean extends AppCompatActivity {
         exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ActivityCloser.closeAllActivities();
                 System.exit(0);
             }
         });

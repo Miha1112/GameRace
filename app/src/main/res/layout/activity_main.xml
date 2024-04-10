@@ -22,6 +22,12 @@
             android:id="@+id/logo"
             android:layout_marginBottom="5mm"
             />
+        <ImageView
+            android:layout_width="750px"
+            android:layout_height="500px"
+            android:src="@drawable/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/logo"/>
         <com.odisey.gamerace.ButtonStrokeText
             android:layout_width="750px"
             android:layout_height="500px"
@@ -29,7 +35,7 @@
             android:textColor="@color/red"
             android:textAllCaps="true"
             android:id="@+id/btn_start"
-            android:background="@drawable/white"
+            android:background="@null"
             android:layout_centerHorizontal="true"
             android:textSize="10mm"
             android:layout_below="@id/logo"
